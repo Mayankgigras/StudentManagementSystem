@@ -1,0 +1,75 @@
+﻿@model WebApp.Models.Marks
+
+@{
+    ViewData["Title"] = "UpdateMarks";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>UpdateMarks</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SaveUpdateMarks">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Yr" class="control-label"></label>
+                <input asp-for="Yr" class="form-control" />
+                <span asp-validation-for="Yr" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="RollNo" class="control-label"></label>
+                <input asp-for="RollNo" class="form-control" />
+                <span asp-validation-for="RollNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Maths" class="control-label"></label>
+                <input asp-for="Maths" class="form-control" />
+                <span asp-validation-for="Maths" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Science" class="control-label"></label>
+                <input asp-for="Science" class="form-control" />
+                <span asp-validation-for="Science" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="History" class="control-label"></label>
+                <input asp-for="History" class="form-control" />
+                <span asp-validation-for="History" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Geography" class="control-label"></label>
+                <input asp-for="Geography" class="form-control" />
+                <span asp-validation-for="Geography" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="English" class="control-label"></label>
+                <input asp-for="English" class="form-control" />
+                <span asp-validation-for="English" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MarksAverage" class="control-label"></label>
+                <input asp-for="MarksAverage" class="form-control" />
+                <span asp-validation-for="MarksAverage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SmAverage" class="control-label"></label>
+                <input asp-for="SmAverage" class="form-control" />
+                <span asp-validation-for="SmAverage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ViewMarks">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

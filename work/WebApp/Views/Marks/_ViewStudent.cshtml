@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<strong>Marks</strong>
+
+<br>
+<ul>
+    @{
+        if (ViewBag.ListStudents.Count != 0)
+        {
+            foreach (var mark in ViewBag.ListStudents)
+            {
+             <li>
+             @mark
+                </li>
+            }
+        }
+        else
+        {
+         <li>No Data Available</li>   
+        }
+
+    }
+</ul>

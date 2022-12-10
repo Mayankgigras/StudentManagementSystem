@@ -1,0 +1,58 @@
+﻿@model IEnumerable<WebApp.Models.Marks>
+
+@{
+    ViewData["Title"] = "ViewStudent";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Students with average more than 90% for 2 years consecutive </h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Yr)
+            </th>
+        
+            <th>
+                @Html.DisplayNameFor(model => model.RollNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Maths)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Science)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SmAverage)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Yr)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.RollNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Maths)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Science)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SmAverage)
+            </td>
+            <td>
+             
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

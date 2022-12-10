@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "ViewHighest";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>ViewHighest</h1>
+
+<body>
+    <div> 
+        <form>
+           <div class="form-group">
+                <label>Number of Students Having Highest Marks in English </label>
+                <input type="text" value=" @ViewBag.Four" />
+                <br>
+                <label>Number of Students Having Highest Marks in Maths </label>
+                <input type="text" value=" @ViewBag.One" />
+                <br>
+                <label>Number of Students Having Highest Marks in Science </label>
+                <input type="text" value="@ViewBag.Sci" />
+                <br>
+                <label>Number of Students Having Average 90 or Greater than 90</label>
+                <input type="text" value=" @ViewBag.Three" />
+                <br>
+            </div>
+        </form>
+    </div>
+</body>
